@@ -2,19 +2,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     font-family: sans-serif;
     position: relative;
-}
-
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-}
-
-#menu-toggle {
-    display: none;
 }
 
 .toolbar-menu{
@@ -22,6 +12,24 @@ header{
     cursor: pointer;
     width: 20px;
     height: 20px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon img {
+    width: 100%; 
+    height: auto;
+    cursor: pointer;
 }
 
 .logo-container{
@@ -54,6 +62,7 @@ header{
     display: flex;
     align-items: center;
     margin-left: auto;
+    position: relative;
 }
 
 .navigation--item{
@@ -85,11 +94,6 @@ header{
     cursor: pointer;
 }
 
-.menu-icon img {
-    width: 20px; 
-    height: auto;
-    cursor: pointer;
-}
 
 @media only screen and (max-width: 800px) {
     .navigation--item,
@@ -104,6 +108,16 @@ header{
     .menu-icon {
         position: absolute;
         display: block;
-        cursor: pointer;
+    }
+
+    #menu-toggle:checked ~ #navigation-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #menu-toggle:checked ~ #navigation-container .navigation--item {
+        display: block;
+        margin-bottom: 10px;
     }
 }

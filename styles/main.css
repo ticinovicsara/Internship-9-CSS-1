@@ -1,7 +1,69 @@
-
-
-.main-container {
+body {
     background-color: black;
     color: white;
 }
 
+main{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+
+.article-container{
+    padding: 1rem;
+    display: block;
+    align-content: center;
+}
+
+.article-heading{
+    font-family: Cygnet-Logo;
+    font-weight: lighter;
+}
+
+.articles{
+    display: flex;
+    flex-direction: row;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.article--image img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden; 
+    position: relative;
+}
+.article1--content {
+    padding: 15px;
+}
+
+#article-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+#article-title:hover{
+    text-decoration: underline;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+#contributors{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: small;
+}

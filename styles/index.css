@@ -6,10 +6,44 @@
     src: url("../assets/fonts/Cygnet.ttf");
 }
 
+@font-face {
+    font-family: NYIrvin;
+    src: url("../assets/fonts/NY\ Irvin.ttf");
+}
+@font-face {
+    font-family: ACalsonPro-Bold;
+    src: url("../assets/fonts/ACaslonPro-Bold.otf");
+}
+@font-face {
+    font-family: ACalsonPro-BoldItalic;
+    src: url("../assets/fonts/ACaslonPro-BoldItalic.otf");
+}
+@font-face {
+    font-family: ACalsonPro-Italic;
+    src: url("../assets/fonts/ACaslonPro-Italic.otf");
+}
+@font-face {
+    font-family: ACalsonPro-Regular;
+    src: url("../assets/fonts/ACaslonPro-Regular.otf");
+}
+@font-face {
+    font-family: ACalsonPro-Semibold;
+    src: url("../assets/fonts/ACaslonPro-Semibold.otf");
+}
+@font-face {
+    font-family: ACalsonPro-Semibolditalic;
+    src: url("../assets/fonts/ACaslonPro-SemiboldItalic.otf");
+}
+
 a {
     text-decoration: none;
     color: inherit; 
 }
 a:active {
     color: inherit;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
 }
