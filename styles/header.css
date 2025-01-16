@@ -1,0 +1,109 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.toolbar-menu{
+    display: flex;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#center-logo {
+    font-family: Cygnet-Logo;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-top {
+    display: block;
+    font-size: 16px;
+}
+
+.logo-bottom {
+    display: block;
+    font-size: 24px;
+}
+
+#navigation-container{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigation--item{
+    justify-content: space-between;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.navigation--item:hover{
+    text-decoration: underline;
+}
+
+.subscribe--button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.subscribe--button:hover {
+    background-color: #0056b3;
+}
+
+.search-icon {
+    width: 25px;
+    height: auto;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 20px; 
+    height: auto;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .navigation--item,
+    .search-icon {
+        display: none;
+    }
+
+    .subscribe--button {
+        display: block;
+    }
+
+    .menu-icon {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+    }
+}

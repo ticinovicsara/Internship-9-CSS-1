@@ -1,0 +1,15 @@
+@import "./header.css";
+@import "./main.css";
+
+@font-face {
+    font-family: Cygnet-Logo;
+    src: url("../assets/fonts/Cygnet.ttf");
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+a:active {
+    color: inherit;
+}
