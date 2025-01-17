@@ -2,9 +2,21 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 3%;
     font-family: sans-serif;
-    position: relative;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: black;
+}
+
+#books:target ~ header{
+    background-color: white;
+    color: black;
 }
 
 .toolbar-menu{
@@ -14,22 +26,18 @@ header{
     height: 20px;
 }
 
-.menu-icon {
+.menu-icon{
     display: none;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
     position: absolute;
 }
 
-#menu-toggle {
-    display: none;
+.menu-icon:hover{
+    cursor: pointer;
 }
 
-.menu-icon img {
-    width: 100%; 
-    height: auto;
-    cursor: pointer;
+.menu-icon img{
+    width: 30px;
+    height: 25px;
 }
 
 .logo-container{
@@ -96,8 +104,7 @@ header{
 
 
 @media only screen and (max-width: 800px) {
-    .navigation--item,
-    .search-icon {
+    #navigation-container {
         display: none;
     }
 
@@ -106,18 +113,6 @@ header{
     }
 
     .menu-icon {
-        position: absolute;
         display: block;
-    }
-
-    #menu-toggle:checked ~ #navigation-container {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    #menu-toggle:checked ~ #navigation-container .navigation--item {
-        display: block;
-        margin-bottom: 10px;
     }
 }
