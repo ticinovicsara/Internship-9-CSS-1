@@ -1,50 +1,145 @@
 body {
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 main{
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
     color: black;
 }
 
+
+
+.picture-article{
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: url("../assets/images/essay-gif.gif");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    height: 400px;
+}
+
+.picture-article-heading{
+    font-family: Cygnet-Logo;
+    font-weight: lighter;
+}
+
+.picture-article--content{
+    color: white;
+    max-width: 400px;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+    line-height: 1.2;
+}
+
+#picture-article--heading{
+    font-size: 40px;
+    margin: 0%;
+}
+
+#picture-article--heading:hover{
+    text-decoration: underline;
+}
+
+#picture-paragraph, #picture-contributors{
+    color: white;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+#picture-contributors{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
 .article-container{
-    padding: 1rem;
+    padding: 2rem;
     display: block;
     align-content: center;
+    scroll-snap-align: center;
 }
 
 .article-heading{
     font-family: Cygnet-Logo;
     font-weight: lighter;
+    flex: none;
+    text-align: center;
 }
 
 .articles{
     display: flex;
     flex-direction: row;
+    position: relative;
+    overflow-x: auto;
+    justify-content: space-between;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+}
+
+.articles::-webkit-scrollbar{
+    height: 8px;
+}
+
+.articles::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.articles::-webkit-scrollbar-thumb:hover {
+    background: darkgray;
 }
 
 .article{
-    display: flex;
+    flex: 0 0 300px;
     flex-direction: column;
-    width: 50%;
-    padding: 20px;
+    padding: 10px;
     margin-left: 10px;
+    box-sizing: border-box;
     cursor: pointer;
+    position: relative;
+    justify-content: center;
+}
+
+.article:not(:last-child)::after {
+    content: "";
+    margin-top: 10px;
+    height: 220px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ddd;
+    transform: translateX(50%);
 }
 
 .article--image img{
     width: 100%;
-    height: 200px;
-    overflow: hidden; 
+    height: 220px;
+    object-fit: cover;
     position: relative;
-}
-.article1--content {
-    padding: 15px;
 }
 
 #article-title{
@@ -60,10 +155,93 @@ main{
 p{
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
+    color: rgb(51, 51, 51);
 }
 
-#contributors{
+.contributors{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: small;
+}
+
+
+.book-article{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.book-article--content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px; 
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.book--article--red-heading{
+    font-family: Cygnet-Logo;
+    font-weight: lighter;
+    color: red;
+    font-size: 12px;
+}
+
+#book-article--heading{
+    font-size: 40px;
+}
+
+#book-article--heading:hover{
+    text-decoration: underline;
+}
+
+#book-paragraph{
+    font-family: ACalsonPro-Italic;
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgb(51, 51, 51);
+}
+
+#date{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+}
+
+.book-article--image{
+    flex: 1;
+    object-fit: cover;
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.book-article--image img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .book-article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-article--content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .book-article--image img {
+        max-width: 100%;
+    }
 }

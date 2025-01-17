@@ -41,7 +41,7 @@ header{
     width: 100%;
 }
 
-#center-logo {
+.center-logo {
     font-family: Cygnet-Logo;
     text-align: center;
     text-decoration: none;
