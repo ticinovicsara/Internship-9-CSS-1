@@ -86,6 +86,7 @@ main{
     font-weight: lighter;
     flex: none;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .articles{
@@ -155,13 +156,13 @@ main{
 p{
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
-    color: rgb(51, 51, 51);
+    color: #5A5A5A;
 }
 
 .contributors{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: small;
+    font-size: 15px;
 }
 
 
@@ -205,13 +206,13 @@ p{
     font-family: ACalsonPro-Italic;
     font-size: 20px;
     font-weight: lighter;
-    color: rgb(51, 51, 51);
+    color: 5A5A5A;
 }
 
 #date{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     color: rgb(51, 51, 51);
 }
 
@@ -237,7 +238,7 @@ p{
     }
 
     .book-article--content {
-        max-width: 100%;
+        max-width: 70%;
         text-align: center;
     }
 
