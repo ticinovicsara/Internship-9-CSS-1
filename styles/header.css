@@ -1,4 +1,4 @@
-header{
+.header-toolbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,6 @@ header{
 
 .toolbar-menu{
     display: flex;
-    cursor: pointer;
     width: 20px;
     height: 20px;
 }
@@ -65,7 +64,6 @@ header{
     display: flex;
     align-items: center;
     margin-left: auto;
-    position: relative;
 }
 
 .navigation--item{
